@@ -1,5 +1,16 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  for (let i=0; i<array.length; i++){
+    const compl = target - array[i];
+
+    for (let j=i+1; j<array.length; j++){
+      if(array[j] === compl) {
+        return true
+
+      }
+    }
+  }
+  return false
 }
 
 /* 
@@ -8,10 +19,14 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+  iter
 */
 
 /*
   Add written explanation of your solution here
+  function that takes two numbers from the array and when the numbers are added should result to the target specified
+
+  if the two numbers are present returns true else returns false.
 */
 
 // You can run `node index.js` to view these console logs
